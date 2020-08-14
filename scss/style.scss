@@ -3,7 +3,52 @@
 @import 'fonts';
 @import 'global';
 
+.header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  background-color: $main-color;
+  color: $color-light;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)), #c9202f;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
+.logo {
+  padding: 44px 11px 40px 17px;
+  background-color: #fff;
+}
 
+.menu {
+  margin: auto 0;
+  font-size: 18px;
+  line-height: 18px;
+
+  &__list-item {
+    display: inline-block;
+    & + .menu__list-item {
+      padding-left: 41px;
+    }
+  }
+}
+
+.header__info {
+  margin: auto 0;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+// .main {
+//   background-color: $main-color;
+//   background: linear-gradient(
+//       104.76deg,
+//       rgba(255, 255, 255, 0.25) -34.36%,
+//       rgba(255, 255, 255, 0) 100%
+//     ),
+//     #c9202f;
+// }
 
 @import 'media';
