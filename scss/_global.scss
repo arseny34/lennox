@@ -20,6 +20,11 @@ li {
   padding: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -41,7 +46,34 @@ body {
 }
 
 .container {
-  max-width: 1780px;
+  max-width: 1720px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.btn {
+  @extend %gilroy-extra-bold;
+  font-size: 18px;
+  line-height: 28px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: auto 0;
+  position: relative;
+  &::after {
+    position: absolute;
+  }
+}
+
+.title {
+  font-style: normal;
+  font-size: 58px;
+  line-height: 70px;
+  letter-spacing: 0.03em;
+}
+
+.text {
+  font-size: 24px;
+  line-height: 28px;
+  color: $text-color-dark;
 }
