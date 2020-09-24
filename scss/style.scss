@@ -19,10 +19,11 @@
   }
 }
 
-// .skroll-block {
-//   background-color: #fff;
-//   color: $text-color-dark;
-// }
+.skroll-block {
+  background-color: #fff;
+  color: $text-color-dark;
+  border-bottom: 1px solid $text-color-dark;
+}
 
 .menu {
   margin: auto 0;
@@ -112,6 +113,10 @@
   &::after {
     content: url(../images/arrow-right-main.svg);
     right: 40px;
+  }
+  &:hover::after {
+    content: url(../images/arrow-right-light.svg);
+    z-index: 15;
   }
 }
 
@@ -473,6 +478,7 @@
 }
 
 .footer {
+  color: $text-color-dark;
   background: linear-gradient(104.76deg, rgba(255, 255, 255, 0.25) -34.36%, rgba(255, 255, 255, 0) 100%), #f8f8f8;
   &__inner {
     max-width: 1112px;
@@ -488,7 +494,6 @@
   &__menu-item {
     font-size: 18px;
     line-height: 28px;
-    color: $text-color-dark;
     list-style: inside;
     & + .footer__menu-item {
       margin-top: 27px;

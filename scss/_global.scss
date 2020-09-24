@@ -52,6 +52,7 @@ body {
 }
 
 .btn {
+  display: inline-block;
   @extend %gilroy-extra-bold;
   font-size: 18px;
   line-height: 28px;
@@ -60,8 +61,24 @@ body {
   cursor: pointer;
   margin: auto 0;
   position: relative;
+  transition: all 0.5s ease-Out;
   &::after {
     position: absolute;
+  }
+  &::before {
+    content: '';
+    width: 0;
+    height: 70px;
+    background: $main-color;
+    position: absolute;
+    transition: all 0.5s ease-Out;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    border: solid 1px $color-light;
+  }
+  &:hover::before {
+    width: 85px;
   }
 }
 
