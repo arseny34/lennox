@@ -62,23 +62,53 @@ body {
   margin: auto 0;
   position: relative;
   transition: all 0.5s ease-Out;
+  padding-top: 21px;
+  padding-bottom: 21px;
   &::after {
     position: absolute;
+  }
+  &:hover::after {
+    z-index: 2;
   }
   &::before {
     content: '';
     width: 0;
     height: 70px;
-    background: $main-color;
     position: absolute;
     transition: all 0.5s ease-Out;
     top: 0;
     right: 0;
     z-index: 2;
+  }
+}
+
+.main-btn {
+  color: $main-color;
+  background-color: $color-light;
+  &::before {
+    background: $main-color;
     border: solid 1px $color-light;
   }
-  &:hover::before {
-    width: 85px;
+  &::after {
+    content: url(../images/arrow-right-main.svg);
+  }
+  &:hover::after {
+    content: url(../images/arrow-right-light.svg);
+  }
+}
+
+.light-btn {
+  color: $color-light;
+  background-color: $main-color;
+  &::before {
+    background: $color-light;
+    border: solid 1px $main-color;
+  }
+  &::after {
+    content: url(../images/arrow-right-light.svg);
+  }
+  &:hover::after {
+    content: url(../images/arrow-right-main.svg);
   }
 }
 
