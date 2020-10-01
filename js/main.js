@@ -2,11 +2,8 @@ $(function () {
   $(window).scroll(function () {
     if ($(window).scrollTop() > 0) {
       $('.header').addClass('skroll-block');
-      $('.header__logo').animate({ padding: '10px 11px 10px 17px' });
-      // $('.header__logo').addClass('header__logo-block');
     } else {
       $('.header').removeClass('skroll-block');
-      $('.header__logo').animate({ padding: '40px 11px 40px 17px' });
     }
   });
 });
