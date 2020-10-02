@@ -5,18 +5,41 @@
 
 .header {
   position: fixed;
-  z-index: 10;
   left: 0;
-  right: 0;
+  top: 0;
+  width: 100%;
   color: $color-light;
+  background-color: $main-color;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $main-color;
+    z-index: 3;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    align-items: center;
   }
   &__logo {
-    padding: 10px 11px 10px 17px;
+    padding: 11px 11px 10px 17px;
     background-color: #fff;
+    img {
+      display: block;
+    }
   }
+  &__logo-mobile {
+    display: none;
+  }
+}
+
+.header__burger {
+  display: none;
 }
 
 .skroll-block {
@@ -26,18 +49,16 @@
 }
 
 .menu {
-  flex-basis: 60%;
+  position: relative;
   margin: auto 0;
   font-size: 18px;
   line-height: 18px;
   &__list {
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0;
   }
   &__list-link {
-    padding: 33px 10px 32px 10px;
+    padding: 34px 10px 33px 10px;
     transition: all 0.5s ease-out;
   }
   &__list-link:hover,
@@ -48,31 +69,15 @@
   &__list-link:focus {
     outline: none;
   }
-
-  // Выезжающее при наведении
-
-  // &__list-link::before {
-  //   content: '';
-  //   position: absolute;
-  //   width: 0;
-  //   height: 86px;
-  //   top: 0;
-  //   left: 0;
-  //   background-color: #fff;
-  //   z-index: -1;
-  // }
-  // &__list-link:hover::before {
-  //   width: 100%;
-  //   transition: all 0.5s ease-out;
-  //   & .menu__list-link {
-  //     color: $text-color-dark;
-  //   }
 }
 
 .header__phone {
   margin: auto 0;
   font-size: 24px;
   line-height: 28px;
+  &-link {
+    display: inline-block;
+  }
 }
 
 .activity {

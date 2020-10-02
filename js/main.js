@@ -6,6 +6,11 @@ $(function () {
       $('.header').removeClass('skroll-block');
     }
   });
+
+  $('.header__burger').click(function (event) {
+    $('.header__burger, .menu').toggleClass('header__burger--active');
+    $('body').toggleClass('lock');
+  });
 });
 
 // Функция-обработчик, которую навешиваем на событие клика по ссылке
