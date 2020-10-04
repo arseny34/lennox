@@ -1,4 +1,8 @@
 @media (max-width: 1500px) {
+  .title {
+    font-size: 54px;
+    line-height: 62px;
+  }
   .header {
     &__phone {
       font-size: 0;
@@ -26,6 +30,26 @@
 }
 
 @media (max-width: 1200px) {
+  .text {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .btn {
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 70px;
+    padding-left: 20px;
+    z-index: 1;
+    &::before {
+      height: 62px;
+    }
+    &::after {
+      right: 25px;
+    }
+    &:hover::before {
+      width: 60px;
+    }
+  }
   .header {
     &__phone {
       padding-right: 0;
@@ -51,26 +75,29 @@
       max-width: 70%;
       font-size: 16px;
     }
-    &__btn {
-      font-size: 14px;
-      line-height: 20px;
-      padding-right: 70px;
-      padding-left: 20px;
-      z-index: 1;
-      &::before {
-        height: 62px;
+  }
+
+  .about {
+    &__advantages {
+      li {
+        font-size: 16px;
       }
-      &::after {
-        right: 25px;
-      }
-      &:hover::before {
-        width: 60px;
-      }
+    }
+    &__fact-text {
+      font-size: 16px;
     }
   }
 }
 
 @media (max-width: 1100px) {
+  .title {
+    font-size: 50px;
+    line-height: 58px;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 24px;
+  }
   .header {
     &__menu-link {
       font-size: 14px;
@@ -93,11 +120,38 @@
       font-size: 14px;
     }
   }
+
+  .about {
+    &__inner {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    &__content {
+      margin-right: 50px;
+    }
+    &__advantages {
+      li {
+        font-size: 14px;
+      }
+    }
+    &__fact-text {
+      font-size: 14px;
+    }
+  }
 }
 
 @media (max-width: 992px) {
   body.lock {
     overflow: hidden;
+  }
+  .btn:hover::before {
+    width: 0;
+  }
+  .main-btn:hover::after {
+    content: url(../images/arrow-right-main.svg);
+  }
+  .light-btn:hover::after {
+    content: url(../images/arrow-right-light.svg);
   }
   .header {
     &__inner {
@@ -193,28 +247,18 @@
       display: block;
       min-height: 150px;
     }
-    &__title-item {
-      font-size: 30px;
-      line-height: 34px;
-    }
-    &__title-item--active {
-      font-size: 50px;
-      line-height: 58px;
-    }
     &__title-link + .activity__title-link {
       margin-left: 0;
       margin-top: 10px;
-    }
-    &__btn:hover::before {
-      width: 0;
-    }
-    &__btn:hover::after {
-      content: url(../images/arrow-right-main.svg);
     }
   }
 }
 
 @media (max-width: 767px) {
+  .title {
+    font-size: 38px;
+    line-height: 44px;
+  }
   .activity {
     height: 100%;
     &__title-images {
@@ -245,6 +289,52 @@
       margin-bottom: 20px;
     }
   }
+
+  .about {
+    &__inner {
+      flex-direction: column;
+      padding-bottom: 40px;
+      padding-top: 40px;
+    }
+    &__content {
+      display: contents;
+    }
+    &__title,
+    &__text {
+      margin-bottom: 15px;
+    }
+    &__advantages {
+      margin-bottom: 10px;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+    &__btn {
+      order: 5;
+      max-width: 274px;
+    }
+    &__facts-list {
+      display: flex;
+    }
+    &__fact {
+      &::before {
+        width: 90px;
+        height: 22px;
+        top: 40px;
+      }
+      &:nth-child(2)::before {
+        width: 120px;
+      }
+      & + .about__fact {
+        margin-left: 30px;
+      }
+    }
+    &__fact-title {
+      font-size: 50px;
+      line-height: 58px;
+    }
+  }
+
   .footer {
     &__inner {
       padding-top: 53px;
