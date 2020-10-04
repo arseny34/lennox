@@ -4,12 +4,13 @@
 @import 'global';
 
 .header {
+  z-index: 2;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   color: $color-light;
-  background-color: $main-color;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)), #c9202f;
   &::before {
     content: '';
     position: absolute;
@@ -17,14 +18,16 @@
     height: 0;
     width: 100%;
     height: 100%;
-    background-color: $main-color;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)), #c9202f;
     z-index: 3;
   }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     position: relative;
     align-items: center;
+    z-index: 4;
   }
   &__logo {
     padding: 11px 11px 10px 17px;
@@ -43,9 +46,12 @@
 }
 
 .skroll-block {
-  background-color: #fff;
   color: $text-color-dark;
   border-bottom: 1px solid $text-color-dark;
+  &.header::before {
+    background-color: #fff;
+    z-index: 2;
+  }
 }
 
 .menu {
@@ -82,10 +88,11 @@
 
 .activity {
   color: $color-light;
+  padding-top: 100px;
   margin-bottom: 40px;
   height: 100vh;
   background-color: $main-color;
-  background: linear-gradient(105deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)), #c9202f;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)), #c9202f;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -95,12 +102,20 @@
   }
   &__title-images {
     margin-bottom: 85px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    img {
+      max-width: 15vw;
+    }
   }
   &__title-list {
     display: flex;
     align-items: flex-end;
     margin-bottom: 60px;
     position: relative;
+    min-height: 86px;
     &::before {
       content: '';
       position: absolute;
@@ -113,6 +128,7 @@
 }
 
 .activity__title-link {
+  display: block;
   & + .activity__title-link {
     margin-left: 55px;
   }
@@ -123,12 +139,12 @@
   opacity: 0.6;
   text-transform: uppercase;
   @extend %gilroy-extra-bold;
-  transition: opacity 1s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 .activity__title-item {
   opacity: 0.45;
-  transition: opacity 1s ease-out;
+  transition: all 0.5s ease-out;
   &:focus {
     outline: none;
   }
@@ -149,6 +165,7 @@
     @extend %jura-bold;
     font-size: 18px;
     line-height: 28px;
+    transition: font-size 0.5s ease-out;
   }
 }
 

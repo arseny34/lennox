@@ -1,10 +1,29 @@
 @media (max-width: 1500px) {
-  .header__phone {
-    padding-right: 20px;
+  .header {
+    &__phone {
+      padding-right: 20px;
+    }
+    &__phone-link {
+      font-size: 0;
+      line-height: 0;
+    }
   }
-  .header__phone-link {
-    font-size: 0;
-    line-height: 0;
+
+  .activity {
+    &__title-item {
+      font-size: 36px;
+      line-height: 42px;
+    }
+    &__title-item--active {
+      font-size: 64px;
+      line-height: 72px;
+    }
+    &__title-list {
+      min-height: 72px;
+    }
+    &__title-link + .activity__title-link {
+      margin-left: 30px;
+    }
   }
 }
 
@@ -12,14 +31,61 @@
   .header__phone {
     padding-right: 0;
   }
-  .menu__list-link {
+  .menu__list-link,
+  .activity__content-text {
     font-size: 16px;
+  }
+  .activity {
+    &__title-item {
+      font-size: 32px;
+      line-height: 36px;
+    }
+    &__title-item--active {
+      font-size: 56px;
+      line-height: 64px;
+    }
+    &__title-list {
+      min-height: 64px;
+    }
+    &__content-text {
+      max-width: 70%;
+    }
+    &__btn {
+      font-size: 14px;
+      line-height: 20px;
+      padding-right: 70px;
+      padding-left: 20px;
+      z-index: 1;
+      &::before {
+        height: 62px;
+      }
+      &::after {
+        right: 25px;
+      }
+      &:hover::before {
+        width: 60px;
+      }
+    }
   }
 }
 
 @media (max-width: 1100px) {
-  .menu__list-link {
+  .menu__list-link,
+  .activity__content-text {
     font-size: 14px;
+  }
+  .activity {
+    &__title-item {
+      font-size: 30px;
+      line-height: 34px;
+    }
+    &__title-item--active {
+      font-size: 50px;
+      line-height: 58px;
+    }
+    &__title-list {
+      min-height: 60px;
+    }
   }
 }
 
@@ -127,5 +193,57 @@
   .header__phone {
     margin: 20px;
     z-index: 3;
+  }
+
+  .activity {
+    &__title-link + .activity__title-link {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    &__title-item {
+      font-size: 30px;
+      line-height: 34px;
+    }
+    &__title-item--active {
+      font-size: 50px;
+      line-height: 58px;
+    }
+    &__title-list {
+      display: block;
+      min-height: 150px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .activity {
+    height: 100%;
+    &__title-images {
+      margin-bottom: 50px;
+      img {
+        max-width: 30vw;
+      }
+      img:nth-child(2n) {
+        display: none;
+      }
+    }
+    &__title-item {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    &__title-item--active {
+      font-size: 38px;
+      line-height: 44px;
+    }
+    &__title-list {
+      min-height: 60px;
+    }
+    &__content {
+      display: block;
+    }
+    &__content-text {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
