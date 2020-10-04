@@ -268,44 +268,43 @@
     display: flex;
     justify-content: space-between;
   }
-}
-
-.products__item {
-  position: relative;
-  min-width: 350px;
-  padding: 33px 70px 40px 18px;
-  background-color: $color-light;
-  color: $title-color-dark;
-  z-index: 1;
-  &:hover {
-    transition: all 0.5s ease-Out;
-    box-shadow: 4px 24px 30px rgba(34, 34, 35, 0.12);
-    color: $color-light;
+  &__item {
+    position: relative;
+    min-width: 350px;
+    padding: 33px 70px 40px 18px;
+    background-color: $color-light;
+    color: $title-color-dark;
+    z-index: 1;
+    &:hover {
+      transition: all 0.5s ease-Out;
+      box-shadow: 4px 24px 30px rgba(34, 34, 35, 0.12);
+      color: $color-light;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 65px;
+      height: 110px;
+      background-color: #2accb8;
+      top: 0;
+      right: 0;
+      transition: all 0.5s ease-Out;
+      z-index: -1;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: #2accb8;
+      left: 19px;
+      top: 108px;
+    }
   }
-  &::before {
-    content: '';
-    position: absolute;
-    width: 65px;
-    height: 110px;
-    background-color: #2accb8;
-    top: 0;
-    right: 0;
-    transition: all 0.5s ease-Out;
-    z-index: -1;
-  }
-  &:hover::before {
-    width: 100%;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    background-color: #2accb8;
-    left: 19px;
-    top: 108px;
-  }
-  &-title {
+  &__item-title {
     @extend %gilroy-extra-bold;
     font-size: 30px;
     line-height: 36px;
@@ -313,12 +312,12 @@
     text-transform: uppercase;
     margin-bottom: 65px;
   }
-  &-line {
+  &__item-line {
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 7px;
   }
-  &-link {
+  &__item-link {
     color: $text-color-dark;
     position: relative;
     &::after {
@@ -444,6 +443,7 @@
   &__items {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__link {
     min-width: 255px;
@@ -451,7 +451,6 @@
     background-color: $color-light;
     position: relative;
     transition: color 0.25s;
-
     &::before,
     &::after {
       box-sizing: inherit;
