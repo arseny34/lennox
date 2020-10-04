@@ -8,7 +8,7 @@ $(function () {
   });
 
   $('.header__burger').click(function (event) {
-    $('.header__burger, .menu').toggleClass('header__burger--active');
+    $('.header__burger, .header__menu').toggleClass('header__burger--active');
     $('body').toggleClass('lock');
   });
 });
