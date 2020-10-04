@@ -659,28 +659,15 @@ body {
 
 .header__logo {
   padding: 11px 11px 10px 17px;
-  background-color: #fff;
-}
-
-.header__logo img {
-  display: block;
-}
-
-.header__logo-mobile {
-  display: none;
+  margin-right: auto;
 }
 
 .header__burger {
   display: none;
 }
 
-.skroll-block {
-  color: #595766;
-  border-bottom: 1px solid #595766;
-}
-
 .skroll-block.header::before {
-  background-color: #fff;
+  background: #c9202f;
   z-index: 2;
 }
 
@@ -689,6 +676,7 @@ body {
   margin: auto 0;
   font-size: 18px;
   line-height: 18px;
+  margin-right: auto;
 }
 
 .menu__list {
@@ -1643,14 +1631,6 @@ body {
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0);
-  }
-  .header__logo {
-    display: none;
-  }
-  .header__logo-mobile {
-    display: block;
-    margin-right: auto;
-    z-index: 3;
   }
   .header__inner {
     -webkit-box-pack: end;
