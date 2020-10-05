@@ -1,3 +1,16 @@
+@media (max-width: 1700px) {
+  .projects {
+    &__list {
+      justify-content: space-around;
+    }
+    &__item {
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1500px) {
   .title {
     font-size: 54px;
@@ -202,7 +215,9 @@
     }
     &__item {
       margin-bottom: 35px;
-      margin-right: 0;
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
       img {
         margin-bottom: 10px;
         min-width: 100%;

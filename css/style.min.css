@@ -684,10 +684,10 @@ body {
 }
 
 .header__menu-link {
-  padding: 34px 10px 33px 10px;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  padding: 23px 10px 23px 10px;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .header__menu-link:hover, .header__menu-link:focus {
@@ -787,9 +787,9 @@ body {
   line-height: 56px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  -webkit-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
 .activity__title-link + .activity__title-link {
@@ -798,9 +798,9 @@ body {
 
 .activity__title-item {
   opacity: 0.5;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .activity__title-item:focus {
@@ -827,9 +827,9 @@ body {
   max-width: 770px;
   font-size: 18px;
   line-height: 28px;
-  -webkit-transition: font-size 0.5s ease-out;
-  -o-transition: font-size 0.5s ease-out;
-  transition: font-size 0.5s ease-out;
+  -webkit-transition: font-size 0.3s ease-out;
+  -o-transition: font-size 0.3s ease-out;
+  transition: font-size 0.3s ease-out;
 }
 
 .activity__btn {
@@ -986,9 +986,6 @@ body {
 }
 
 .products__item:hover {
-  -webkit-transition: all 0.5s ease-Out;
-  -o-transition: all 0.5s ease-Out;
-  transition: all 0.5s ease-Out;
   -webkit-box-shadow: 4px 24px 30px rgba(34, 34, 35, 0.12);
           box-shadow: 4px 24px 30px rgba(34, 34, 35, 0.12);
   color: #fff;
@@ -1049,9 +1046,9 @@ body {
   bottom: -3px;
   left: 0;
   background-color: #2accb8;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .products__item-link:hover::after {
@@ -1117,9 +1114,9 @@ body {
   width: 0;
   height: 225px;
   background-color: #fff;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   z-index: -1;
 }
 
@@ -1288,25 +1285,25 @@ body {
 
 .projects__item {
   margin-bottom: 70px;
-  margin-right: 30px;
   text-align: center;
   max-width: 540px;
 }
 
 .projects__item :hover {
-  -webkit-transition: all 0.8s ease-out;
-  -o-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   opacity: 1;
 }
 
 .projects__item img {
   margin-bottom: 26px;
   opacity: 0.5;
-  width: 540px;
-  height: 300px;
+  width: 100%;
+  max-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  object-fit: cover;
 }
 
 .projects__item a {
@@ -1325,9 +1322,9 @@ body {
 }
 
 .projects__item:hover .projects__item-title::before {
-  -webkit-transition: all 0.8s ease-out;
-  -o-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   width: 100%;
 }
 
@@ -1465,6 +1462,16 @@ body {
 
 .footer__right-text p {
   margin-bottom: 30px;
+}
+
+@media (max-width: 1700px) {
+  .projects__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .projects__item:nth-child(odd) {
+    margin-right: 30px;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -1643,6 +1650,8 @@ body {
   }
   .projects__item {
     margin-bottom: 35px;
+  }
+  .projects__item:nth-child(odd) {
     margin-right: 0;
   }
   .projects__item img {
