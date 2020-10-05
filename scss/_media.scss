@@ -88,6 +88,23 @@
     }
   }
 
+  .products {
+    &__item {
+      min-width: 300px;
+      padding: 33px 50px 30px 18px;
+      &::before {
+        width: 60px;
+        height: 90px;
+      }
+      &::after {
+        top: 88px;
+      }
+    }
+    &__item-title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
   .projects {
     &__list {
       justify-content: center;
@@ -145,6 +162,13 @@
     }
   }
 
+  .products {
+    &__inner {
+      padding-top: 50px;
+      padding-bottom: 80px;
+    }
+  }
+
   .solutions {
     &__inner {
       padding-top: 50px;
@@ -185,14 +209,7 @@
         width: 100%;
         height: auto;
         object-fit: cover;
-        opacity: 1;
       }
-    }
-    &__item:hover .projects__item-title::before {
-      width: 0;
-    }
-    &__item:hover .projects__item-title {
-      color: $title-color-dark;
     }
     &__item-title {
       margin-bottom: 5px;
@@ -313,6 +330,22 @@
     }
   }
 
+  .products {
+    &__items {
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 500px;
+    }
+    &__item {
+      margin-bottom: 20px;
+    }
+    &__item-link {
+      &:hover::after {
+        width: 0;
+      }
+    }
+  }
+
   .solutions {
     &__title {
       margin-bottom: 0;
@@ -345,6 +378,22 @@
         height: 0;
         opacity: 0;
       }
+    }
+  }
+
+  .projects {
+    &__item-title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    img {
+      opacity: 1;
+    }
+    &__item:hover .projects__item-title::before {
+      width: 0;
+    }
+    &__item:hover .projects__item-title {
+      color: $title-color-dark;
     }
   }
 }
